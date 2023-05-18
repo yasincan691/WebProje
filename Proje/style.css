@@ -1,7 +1,20 @@
 
-
 .maviyazi
 {
     color:blue;
     
 }
+.carousel-item img {
+    height: 700px;
+    width: 100%;
+    object-fit: cover; 
+}
+
+.card-img-top {
+    height: 200px; /* Adjust the height as desired */
+    object-fit: cover;
+}
+
+
+
+
