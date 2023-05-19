@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="tr">
 <html>
+
 <head>
-	<title>Web Proje Blog</title>
+
+	<title>İlgi Alanlarım</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // API'den film verilerini almak için AJAX isteği yapılır
+      $.ajax({
+        url: "https://www.anapioficeandfire.com/api/characters/583", // API'nin URL'si buraya yazılmalı
+        method: "GET",
+        success: function(data) {
+          // AJAX isteği başarılı olursa, verileri işleyip sayfaya ekleyin
+          var films = data.films; // API'den gelen film verileri
+
+          // Verileri döngüyle gezerek liste olarak sayfaya ekleyin
+          var list = "<ul>";
+          for (var i = 0; i < films.length; i++) {
+            var film = films[i];
+            list += "<li>" + film.title + "</li>";
+          }
+          list += "</ul>";
+
+          // Listeyi ilgili div öğesine ekleyin
+          $("#film-listesi").html(list);
+        },
+        error: function() {
+          // AJAX isteği başarısız olursa hata mesajını gösterin
+          $("#film-listesi").html("Veri alınamadı.");
+        }
+      });
+    });
+  </script>-
 </head>
+
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-light"style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg navbar-light"style="background-color: #e3f2fd;">
 		
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
@@ -31,12 +64,12 @@
               <li class="nav-item">
 				<a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
 			  </li>
-        <li class="nav-item">
-          <a class="nav-link" href="takimimiz.html">Takımımız</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a>
-            </li>
+              <li class="nav-item">
+				<a class="nav-link" href="takimimiz.html">Takımımız</a>
+			  </li>
+              <li class="nav-item">
+				<a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a>
+			  </li>
 		  </ul>
 		  <form class="form-inline my-2 my-lg-0">
 			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -46,50 +79,14 @@
 	  </nav>
 
 
-    <div class="container ml-1">
-      <h1 class="font-weight-bold">Hakkımda</h1>
-      <p class="font-italic">Benim adım Yasin Can Kaya, 19 yaşındayım ve Bilecik’de yaşıyorum. Sakarya Üniversitesi Bilgisayar Mühendisliği 1. sınıf öğrencisiyim.</p>
-
-    </div>
-
-    <h1 class="mt-3 mb-4 ml-3 font-weight-bold"">Hobilerim</h1>
-<div class="d-flex flex-wrap">
-  <div class="card ml-3" style="width: 18rem;">
-    <img src="/resimler/filmizlemek.jpg" class="card-img-top img-fluid" alt="...">
-    <div class="card-body">
-      <p class="card-text font-italic">Film İzlemek</p>
-    </div>
-  </div>
-
-  <div class="card ml-3 font-italic" style="width: 18rem;">
-    <img src="/resimler/kitapokumak.jpg" class="card-img-top img-fluid" alt="...">
-    <div class="card-body">
-      <p class="card-text">Kitap Okumak</p>
-    </div>
-  </div>
-
-  <div class="card ml-3 font-italic" style="width: 18rem;">
-    <img src="/resimler/bilgisayaroyunu.png" class="card-img-top img-fluid" alt="...">
-    <div class="card-body">
-      <p class="card-text">Bilgisayar Oyunu Oynamak</p>
-    </div>
-  </div>
-
-  <div class="card ml-3 font-italic" style="width: 18rem;">
-    <img src="/resimler/spor.png" class="card-img-top img-fluid" alt="...">
-    <div class="card-body">
-      <p class="card-text">Spor Yapmak</p>
-    </div>
-  </div>
-</div>
+	<h1>İlgi Alanlarım</h1>
+    <h2>Film</h2>
+    <div id="film-listesi"></div>
 
 
-    
-
-	
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 </body>
-</html>
+<html>
