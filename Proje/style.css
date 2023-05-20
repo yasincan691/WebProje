@@ -1,9 +1,5 @@
 
-.maviyazi
-{
-    color:blue;
-    
-}
+
 .carousel-item img {
     height: 700px;
     width: 100%;
@@ -11,10 +7,31 @@
 }
 
 .card-img-top {
-    height: 200px; /* Adjust the height as desired */
+    height: 300px; 
     object-fit: cover;
 }
 
+img {
+    border: 3px solid black;
+    padding: 0px;
+  }
 
+body {
+    background-image: url("/resimler/arkaplan.jpeg");
+    background-size: cover;
+    background-position:inherit;
+    background-repeat: no-repeat;
+}
 
-
+body {
+    background-image: url("/resimler/arkaplan.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.904); /* Kenar süslemesi için kullanacağınız arka plan rengini ve şeffaflık değerini ayarlayın */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1250px; /* İçeriğinizin genişliğine göre ayarlayın */
+  }

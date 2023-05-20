@@ -11,35 +11,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      // API'den film verilerini almak için AJAX isteği yapılır
-      $.ajax({
-        url: "https://www.anapioficeandfire.com/api/characters/583", // API'nin URL'si buraya yazılmalı
-        method: "GET",
-        success: function(data) {
-          // AJAX isteği başarılı olursa, verileri işleyip sayfaya ekleyin
-          var films = data.films; // API'den gelen film verileri
 
-          // Verileri döngüyle gezerek liste olarak sayfaya ekleyin
-          var list = "<ul>";
-          for (var i = 0; i < films.length; i++) {
-            var film = films[i];
-            list += "<li>" + film.title + "</li>";
-          }
-          list += "</ul>";
-
-          // Listeyi ilgili div öğesine ekleyin
-          $("#film-listesi").html(list);
-        },
-        error: function() {
-          // AJAX isteği başarısız olursa hata mesajını gösterin
-          $("#film-listesi").html("Veri alınamadı.");
-        }
-      });
-    });
-  </script>-
 </head>
 
 <body>
@@ -71,18 +43,15 @@
 				<a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a>
 			  </li>
 		  </ul>
-		  <form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-		  </form>
+		  
 		</div>
 	  </nav>
 
-
+<div class="container">
 	<h1>İlgi Alanlarım</h1>
-    <h2>Film</h2>
+    <h3>Favori Filmlerim</h3>
     <div id="film-listesi"></div>
-
+</div>	
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
