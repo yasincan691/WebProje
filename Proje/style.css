@@ -53,3 +53,19 @@ body {
       padding:40px;
     }
   }
+
+  .form-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    flex-basis: 150px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    flex-grow: 1;
+    margin-left: 10px;
+}

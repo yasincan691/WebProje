@@ -161,46 +161,71 @@
 			</ul>
 		</div>
 	</nav>
-<div class="container">
-	<h1 class="mb-4">İLETİŞİM</h1>
-	<form action="./sonuc.html" onsubmit="return passvalue()">
-		<label for="ad">Ad:</label>
-		<input type="text" id="ad" name="ad"> <br><br>
-		<label for="email">E-posta:</label>
-		<input type="text" id="email" name="email"><br><br>
-		<label for="sifre">Şifre:</label>
-		<input type="password" id="sifre" name="sifre"><br><br>
-		<label for="mesaj">Mesaj:</label>
-		<textarea id="mesaj" name="mesaj"></textarea><br><br>
-		<label for="dosya">Dosya:</label>
-		<input type="file" id="dosya" name="dosya"><br><br>
-		<label for="renk">Renk:</label>
-		<input type="color" id="renk" name="renk"><br><br>
-		<label for="tarih">Tarih:</label>
-		<input type="date" id="tarih" name="tarih"><br><br>
-		<label for="zaman">Zaman:</label>
-		<input type="time" id="zaman" name="zaman"><br><br>
-		<label for="sayi">Yaş:</label>
-		<input type="number" id="sayi" name="sayi"><br><br>
-		<label for="web">Web Sitesi:</label>
-		<input type="url" id="web" name="web"><br><br>
-		<label for="checkbox">Onaylıyor musunuz? :</label>
-		<input type="checkbox" id="checkbox" name="checkbox"><br><br>
-		Cinsiyetiniz : 
-		<label for="radio1">Erkek:</label>
-		<input type="radio" id="radio1" name="seçenek" value="Erkek">
-		<label for="radio2">Kadın:</label>
-		<input type="radio" id="radio2" name="seçenek" value="Kadın"><br>
-		<label for="select">En sevdiğiniz içecek :</label>
-		<select id="select" name="secim">
-			<option value="Kola">Kola</option>
-			<option value="Çay">Çay</option>
-			<option value="Kahve">Kahve</option>
-		</select><br><br>
-		<input type="submit" value="Gönder">
-		<input type="reset" value="Temizle">
-	</form>
-</div>
+	<div class="container">
+		<h1 class="mb-4 text-center">İLETİŞİM</h1>
+		<form action="./sonuc.html" onsubmit="return passvalue()">
+			<div class="form-group">
+				<label for="ad">Ad:</label>
+				<input type="text" id="ad" name="ad">
+			</div>
+			<div class="form-group">
+				<label for="email">E-posta:</label>
+				<input type="text" id="email" name="email">
+			</div>
+			<div class="form-group">
+				<label for="sifre">Şifre:</label>
+				<input type="password" id="sifre" name="sifre">
+			</div>
+			<div class="form-group">
+				<label for="mesaj">Mesaj:</label>
+				<textarea id="mesaj" name="mesaj"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="dosya">Dosya:</label>
+				<input type="file" id="dosya" name="dosya">
+			</div>
+			<div class="form-group">
+				<label for="renk">Renk:</label>
+				<input type="color" id="renk" name="renk">
+			</div>
+			<div class="form-group">
+				<label for="tarih">Tarih:</label>
+				<input type="date" id="tarih" name="tarih">
+			</div>
+			<div class="form-group">
+				<label for="zaman">Zaman:</label>
+				<input type="time" id="zaman" name="zaman">
+			</div>
+			<div class="form-group">
+				<label for="sayi">Yaş:</label>
+				<input type="number" id="sayi" name="sayi">
+			</div>
+			<div class="form-group">
+				<label for="web">Web Sitesi:</label>
+				<input type="url" id="web" name="web">
+			</div>
+			
+				<label for="checkbox">Onaylıyor musunuz? : </label>
+				<input type="checkbox" id="checkbox" name="checkbox">
+			
+			<div class="form-group">
+				<label for="radio1">Erkek:</label>
+				<input type="radio" id="radio1" name="seçenek" value="Erkek">
+				<label for="radio2">Kadın:</label>
+				<input type="radio" id="radio2" name="seçenek" value="Kadın">
+			</div>
+			<div class="form-group">
+				<label for="select">En sevdiğiniz içecek :</label>
+				<select id="select" name="secim">
+					<option value="Kola">Kola</option>
+					<option value="Çay">Çay</option>
+					<option value="Kahve">Kahve</option>
+				</select>
+			</div>
+			<input type="submit" value="Gönder">
+			<input type="reset" value="Temizle">
+		</form>
+	</div>
 
 
 

@@ -10,7 +10,9 @@
         $count = mysqli_num_rows($result);  
         
         if($count == 1){  
-            header("Location: index.html");
+            echo '<script>alert("Hoşgeldiniz '.$username.'");</script>';
+            header("Location: anasayfa.html");
+            
         }  
         else{  
             echo  '<script>
@@ -20,3 +22,4 @@
         }     
     }
     ?>
+    
